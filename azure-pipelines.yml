@@ -15,3 +15,9 @@ steps:
     command: 'build'
     projects: 'FrontEnd.sln'
     arguments: '-c Release -f net6.0-android'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
