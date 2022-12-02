@@ -17,6 +17,17 @@
     <Color x:Key="Gray600">#404040</Color>
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
+    
+    <Color x:Key="Purple">#512BD4</Color>
+    <Color x:Key="SpaceCadet">#2D3142</Color>
+    <Color x:Key="SilverMetallic">#ADACB5</Color>
+    <Color x:Key="LightGray">#D8D5DB</Color>
+    <Color x:Key="LavenderWeb">#EAE8FF</Color>
+    <Color x:Key="BabyBlueEyes">#B0D7FF</Color>
+    <Color x:Key="GunMetal">#022B3A</Color>
+    
+
+
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
     <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
@@ -31,6 +42,8 @@
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
 
+    <SolidColorBrush x:Key="PurpleBrush" Color="{StaticResource Purple}"/>
+
     <Color x:Key="Yellow100Accent">#F7B548</Color>
     <Color x:Key="Yellow200Accent">#FFD590</Color>
     <Color x:Key="Yellow300Accent">#FFE5B9</Color>
@@ -40,5 +53,6 @@
     <Color x:Key="Blue100Accent">#3E8EED</Color>
     <Color x:Key="Blue200Accent">#72ACF1</Color>
     <Color x:Key="Blue300Accent">#A7CBF6</Color>
+    
 
 </ResourceDictionary>

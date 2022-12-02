@@ -1,4 +1,8 @@
-﻿namespace FrontEnd;
+﻿using FrontEnd.Models;
+using FrontEnd.ViewModels;
+using FrontEnd.Views;
+
+namespace FrontEnd;
 
 public static class MauiProgram
 {
@@ -13,6 +17,12 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+		builder.Services.AddSingleton<ErrorReportListPage>();
+        builder.Services.AddSingleton<ReportDescriptionPage>();
+        builder.Services.AddSingleton<LoginPage>();
+
+        builder.Services.AddSingleton<LoginPageViewModel>();
+
+        return builder.Build();
 	}
 }
