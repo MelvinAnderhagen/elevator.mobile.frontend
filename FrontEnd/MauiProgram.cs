@@ -32,6 +32,7 @@ public static class MauiProgram
 		}).ConfigurePrimaryHttpMessageHandler(() => new LocalhostAndroidHttpsMessageHandler());
 
         builder.Services.AddSingleton<LoginPageViewModel>();
+        builder.Services.AddSingleton<ErrorReportListViewModel>();
 
         return builder.Build();
 	}

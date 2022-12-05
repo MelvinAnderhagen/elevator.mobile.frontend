@@ -1,4 +1,5 @@
 using FrontEnd.Clients;
+using FrontEnd.ViewModels;
 
 namespace FrontEnd.Views;
 
@@ -8,7 +9,7 @@ public partial class ErrorReportListPage : ContentPage
 
     //string _fileName = Path.Combine(FileSystem.AppDataDirectory, "errorReports.txt");
 
-    public ErrorReportListPage(ApiClient client)
+    public ErrorReportListPage(ApiClient client, ErrorReportListViewModel viewModel)
 	{
 		InitializeComponent();
         _client = client;
@@ -16,5 +17,7 @@ public partial class ErrorReportListPage : ContentPage
         {
             await _client.GetAllErrorReports();
         });
+
+        BindingContext = viewModel;
     }
 }
