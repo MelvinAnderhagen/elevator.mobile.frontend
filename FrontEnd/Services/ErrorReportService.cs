@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrontEnd.Models
+namespace FrontEnd.Services
 {
-    internal class ErrorReportList
+    internal class ErrorReportService
     {
     }
 }
