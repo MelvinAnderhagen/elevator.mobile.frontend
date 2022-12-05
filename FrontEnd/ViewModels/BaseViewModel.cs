@@ -1,6 +1,10 @@
-﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+﻿using FrontEnd.Models;
+using Java.Util;
+using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,5 +14,26 @@ namespace FrontEnd.ViewModels
     public partial class BaseViewModel : ObservableObject
     {
         public bool isLoggedIn { get; set; }
+
+        public BaseViewModel()
+        {
+            items = new ObservableCollection<ErrorReport>();
+        }
+
+        [ObservableProperty]
+        private ObservableCollection<ErrorReport> items;
+
+        [ObservableProperty]
+        private Guid Id;
+
+        //[RelayCommand]
+        //private async Task TAP(ErrorReport errorReport)
+        //{
+        //    await Shell.Current.GoToAsync($"{nameof(ReportDescriptionPage)}", new Dictionary<string, object>
+        //    {
+        //        {nameof(ErrorReport), errorReport } 
+        //    });
+        //}
+
     }
 }
