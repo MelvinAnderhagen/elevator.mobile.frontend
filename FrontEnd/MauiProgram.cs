@@ -28,7 +28,7 @@ public static class MauiProgram
 
 		builder.Services.AddHttpClient<ApiClient>(options =>
 		{
-			options.BaseAddress = new Uri("https://10.0.2.2:7174/api/");
+			options.BaseAddress = new Uri("https://grupp5elevatorapidev.azurewebsites.net/api/");
 		}).ConfigurePrimaryHttpMessageHandler(() => new LocalhostAndroidHttpsMessageHandler());
 
         builder.Services.AddSingleton<LoginPageViewModel>();
