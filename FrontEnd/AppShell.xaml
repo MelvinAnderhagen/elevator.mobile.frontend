@@ -9,8 +9,10 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate views:ErrorReportListPage}"
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"
+        Route="ErrorReportListPage" />
 
     <FlyoutItem Route="ErrorReportList" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="ErrorReportList" ContentTemplate="{DataTemplate views:ErrorReportListPage}"/>

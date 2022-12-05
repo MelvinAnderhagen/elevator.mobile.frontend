@@ -18,7 +18,7 @@ namespace FrontEnd.Services
 				{
 					var userInfo = new UserInfo();
 					var client = new HttpClient();
-					string url = "" + username + "/" + password;
+					string url = "https://localhost:7174/api/Employee/Service" + username + "/" + password;
 
 					client.BaseAddress = new Uri(url);
 					HttpResponseMessage response = await client.GetAsync("");

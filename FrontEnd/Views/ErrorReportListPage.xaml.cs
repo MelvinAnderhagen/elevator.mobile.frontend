@@ -1,14 +1,20 @@
+using FrontEnd.Clients;
+
 namespace FrontEnd.Views;
 
 public partial class ErrorReportListPage : ContentPage
 {
+    private readonly ApiClient _client;
+
     //string _fileName = Path.Combine(FileSystem.AppDataDirectory, "errorReports.txt");
 
-    public ErrorReportListPage()
+    public ErrorReportListPage(ApiClient client)
 	{
 		InitializeComponent();
-
-        //if (File.Exists(_fileName))
-        //    TextEditor.Text = File.ReadAllText(_fileName);
+        _client = client;
+        Task.Run(async () =>
+        {
+            await _client.GetAllErrorReports();
+        });
     }
 }

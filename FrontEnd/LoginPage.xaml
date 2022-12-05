@@ -61,7 +61,7 @@
                     <Label Text="Forgot Password" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="Center"/>
                 </StackLayout>
 
-                <Button Text="Sign In" BackgroundColor="{StaticResource SilverMetallic}" TextColor="Black" FontAttributes="Bold" Margin="0,15,0,0" Command="{Binding LoginCommand}"/>
+                <Button Text="Sign In" BackgroundColor="Green" TextColor="Black" FontAttributes="Bold" Margin="0,15,0,0" Command="{Binding LoginCommand}"/>
 
 
             </StackLayout>
