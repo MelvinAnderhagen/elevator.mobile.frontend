@@ -1,5 +1,5 @@
 ﻿using FrontEnd.Models;
-using Java.Util;
+
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;
@@ -17,23 +17,16 @@ namespace FrontEnd.ViewModels
 
         public BaseViewModel()
         {
-            items = new ObservableCollection<ErrorReport>();
+            Items = new ObservableCollection<ErrorReport>();
         }
 
         [ObservableProperty]
-        private ObservableCollection<ErrorReport> items;
+        private ObservableCollection<ErrorReport> _items;
 
         [ObservableProperty]
-        private Guid Id;
+        private Guid _errorReportId;
 
-        //[RelayCommand]
-        //private async Task TAP(ErrorReport errorReport)
-        //{
-        //    await Shell.Current.GoToAsync($"{nameof(ReportDescriptionPage)}", new Dictionary<string, object>
-        //    {
-        //        {nameof(ErrorReport), errorReport } 
-        //    });
-        //}
+       
 
     }
 }

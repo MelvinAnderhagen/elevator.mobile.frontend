@@ -29,7 +29,7 @@ public static class MauiProgram
 		builder.Services.AddHttpClient<ApiClient>(options =>
 		{
 			options.BaseAddress = new Uri("https://grupp5elevatorapidev.azurewebsites.net/api/");
-		}).ConfigurePrimaryHttpMessageHandler(() => new LocalhostAndroidHttpsMessageHandler());
+		});/*.ConfigurePrimaryHttpMessageHandler(() => new LocalhostAndroidHttpsMessageHandler());*/
 
         builder.Services.AddSingleton<LoginPageViewModel>();
         builder.Services.AddSingleton<ErrorReportListViewModel>();
