@@ -15,6 +15,13 @@ namespace FrontEnd.Models
         public DateTime Deadline { get; set; }
 
 
+        public virtual Breakdown Breakdown { get; set; } = null!;
+        public virtual Elevator Elevator { get; set; } = null!;
+        public virtual Employee Employee { get; set; } = null!;
+        public virtual ICollection<ErrorReportComment> ErrorReportComments { get; set; }
+        public virtual ICollection<ErrorReportRow> ErrorReportRows { get; set; }
+
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;
