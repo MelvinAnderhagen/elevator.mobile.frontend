@@ -10,20 +10,31 @@
              >
     
     
-    
-    <VerticalStackLayout Spacing="10" Margin="5">
+    <VerticalStackLayout Spacing="10" Margin="5" >
         <CollectionView ItemsSource="{Binding ErrorReports}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type models:ErrorReport }">
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
+                    <Grid Margin="0"
+                            Padding="5, 10">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+
+                        <Image Source="./Resources/Images/quokka.jpg" 
+                               Scale="1.9"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               WidthRequest="48"
+                               HeightRequest="48">
+                            <Image.Clip>
+                                <EllipseGeometry RadiusX="13"
+                                                 RadiusY="13"
+                                                 Center="24, 24" />
+                            </Image.Clip>
+                            
+                        </Image>
+
                         <Ellipse Margin="0"
                                  Fill="Transparent"
                                  Stroke="LightGray"
@@ -34,22 +45,28 @@
                                  HorizontalOptions="Center">
                         </Ellipse>
 
-                        <StackLayout Grid.Column="1" Padding="18,1,18,7" Orientation="Vertical">
+                        <StackLayout Grid.Column="1" Orientation="Vertical" Padding="20,5" Margin="2">
                             <Label Grid.Column="1"
+                               Text="Error Report Id:"
+                               FontAttributes="Bold"
+                               />
+                            <Label Grid.Row="1"
+                               Grid.Column="1"
                                Text="{Binding Id}"
+                               Margin="1"
+                               />
+
+                            <Label Grid.Column="1"
+                               Text="Deadline:"
                                FontAttributes="Bold"
                                />
                             <Label Grid.Row="1"
                                Grid.Column="1"
-                               Text="{Binding IsDone}"
-                               FontAttributes="Bold"
-                               />
-                            <Label Grid.Row="1"
-                               Grid.Column="1"
-                               Text="{Binding FinishDate}" 
+                               Text="{Binding Deadline}" 
                                FontAttributes="Italic"
                                VerticalOptions="End"
                                />
+                            
                             <Button Text="Description"
                                     Padding="5"
                                     BackgroundColor="{StaticResource SpaceCadet}"
@@ -68,7 +85,5 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        
-        
     </VerticalStackLayout>
 </ContentPage>

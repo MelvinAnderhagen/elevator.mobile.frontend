@@ -19,6 +19,12 @@ namespace FrontEnd.ViewModels
         [ObservableProperty]
         private List<ErrorReport> _errorReports;
 
+
+        Image Image = new Image
+        {
+            Source = ImageSource.FromResource("quokka.jpg")
+        };
+
         public ErrorReportListViewModel(ApiClient client)
         {
             _client = client;
