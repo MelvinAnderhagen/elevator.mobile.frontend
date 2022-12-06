@@ -41,8 +41,6 @@ namespace FrontEnd.Clients
             return Reports;
         }
 
-        
-
         public async Task UpdateErrorReportStatus()
         {
             try
@@ -57,11 +55,8 @@ namespace FrontEnd.Clients
             }
             catch (Exception e)
             {
-
                 Debug.WriteLine(@"\tERROR {0}", e.Message);
             }
-
-            
         }
     }
 }
