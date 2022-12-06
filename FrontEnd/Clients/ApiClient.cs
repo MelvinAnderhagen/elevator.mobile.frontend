@@ -50,7 +50,8 @@ namespace FrontEnd.Clients
 
                 if (response.IsSuccessStatusCode)
                 {
-
+                    string content = await response.Content.ReadAsStringAsync();
+                    Reports = JsonConvert.DeserializeObject<List<ErrorReport>>(content);
                 }
             }
             catch (Exception e)

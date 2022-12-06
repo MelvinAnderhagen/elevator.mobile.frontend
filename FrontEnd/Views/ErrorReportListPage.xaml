@@ -25,15 +25,29 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
+                        <Ellipse Margin="0"
+                                 Fill="Transparent"
+                                 Stroke="LightGray"
+                                 StrokeThickness="1"
+                                 HeightRequest="50"
+                                 WidthRequest="50"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+                        </Ellipse>
 
-                        <Label Grid.Column="1"
+                        <StackLayout Grid.Column="1" Padding="18,1,18,7" Orientation="Vertical">
+                            <Label Grid.Column="1"
                                Text="{Binding Id}"
                                FontAttributes="Bold"
                                />
-                        <Label Grid.Row="1"
+                            <Label Grid.Row="1"
                                Grid.Column="1"
-                               
-                               Text="{Binding FinishDate}"
+                               Text="{Binding IsDone}"
+                               FontAttributes="Bold"
+                               />
+                            <Label Grid.Row="1"
+                               Grid.Column="1"
+                               Text="{Binding FinishDate}" 
                                FontAttributes="Italic"
                                VerticalOptions="End"
                                />

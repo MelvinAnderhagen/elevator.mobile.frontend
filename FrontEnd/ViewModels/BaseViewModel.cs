@@ -26,15 +26,14 @@ namespace FrontEnd.ViewModels
         [ObservableProperty]
         private Guid _errorReportId;
 
-
-        //private async Task Tap(ErrorReport report)
-        //{
-        //    await Shell.Current.GoToAsync($"{nameof(ReportDescriptionPage)}", new Dictionary<string, object>
-        //    {
-        //        { nameof(ErrorReport), report }
-        //    });
-        //}
-
+        
+        private async Task Tap(ErrorReport report)
+        {
+            await Shell.Current.GoToAsync($"{nameof(ReportDescriptionPage)}", new Dictionary<string, object>
+            {
+                { nameof(ErrorReport), report }
+            });
+        }
 
 
 
