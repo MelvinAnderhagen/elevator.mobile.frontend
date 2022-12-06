@@ -23,12 +23,10 @@ namespace FrontEnd.ViewModels
         {
             _client = client;
             Task.Run(Initialize).ConfigureAwait(false);
-
         }
         public async Task Initialize()
         {
             ErrorReports = await _client.GetAllErrorReports();
-
         }
 
         

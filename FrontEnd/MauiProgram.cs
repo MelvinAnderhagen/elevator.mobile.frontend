@@ -33,6 +33,7 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<LoginPageViewModel>();
         builder.Services.AddSingleton<ErrorReportListViewModel>();
+        builder.Services.AddSingleton<BaseViewModel>();
 
         return builder.Build();
 	}

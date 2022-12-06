@@ -1,5 +1,5 @@
 ﻿using FrontEnd.Models;
-
+using FrontEnd.Views;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;
@@ -26,7 +26,16 @@ namespace FrontEnd.ViewModels
         [ObservableProperty]
         private Guid _errorReportId;
 
-       
+        
+        private async Task Tap(ErrorReport report)
+        {
+            await Shell.Current.GoToAsync($"{nameof(ReportDescriptionPage)}", new Dictionary<string, object>
+            {
+                { nameof(ErrorReport), report }
+            });
+        }
+
+
 
     }
 }
