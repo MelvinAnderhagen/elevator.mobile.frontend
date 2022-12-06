@@ -5,11 +5,8 @@ namespace FrontEnd.Views;
 
 public partial class ErrorReportListPage : ContentPage
 {
-    
 
-    //string _fileName = Path.Combine(FileSystem.AppDataDirectory, "errorReports.txt");
-
-    public ErrorReportListPage(ApiClient client, ErrorReportListViewModel viewModel)
+    public ErrorReportListPage(ErrorReportListViewModel viewModel)
 	{
 		InitializeComponent();
         BindingContext = viewModel;

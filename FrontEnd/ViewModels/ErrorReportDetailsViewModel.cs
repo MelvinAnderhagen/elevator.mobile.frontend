@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace FrontEnd.ViewModels
 {
-    internal class ErrorReportDetailsViewModel
+    public partial class ErrorReportDetailsViewModel : ObservableObject
     {
+
     }
 }
