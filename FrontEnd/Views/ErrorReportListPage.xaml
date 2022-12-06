@@ -8,15 +8,16 @@
              x:DataType="viewModels:ErrorReportListViewModel"
              
              >
+
     
-    
-    
-    <VerticalStackLayout Spacing="10" Margin="5">
+
+        <VerticalStackLayout Spacing="10" Margin="5">
         <CollectionView ItemsSource="{Binding ErrorReports}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type models:ErrorReport }">
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
+                    
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
@@ -36,6 +37,12 @@
                                FontAttributes="Italic"
                                VerticalOptions="End"
                                />
+                        <Frame>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}" Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:BaseViewModel}}, Path=TapCommand}" />
+                            </Frame.GestureRecognizers>
+                        
+                        </Frame>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
