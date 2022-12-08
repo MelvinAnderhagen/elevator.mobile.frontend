@@ -8,44 +8,32 @@
              x:DataType="viewModels:ErrorReportListViewModel"
              
              >
-    
-    
-    <VerticalStackLayout Spacing="10" Margin="5" >
-        <CollectionView ItemsSource="{Binding ErrorReports}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type models:ErrorReport }">
-                    <Grid Margin="0"
-                            Padding="5, 10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
 
-                        <Image Source="./Resources/Images/quokka.jpg" 
-                               Scale="1.9"
-                               VerticalOptions="Center"
-                               HorizontalOptions="Center"
-                               WidthRequest="48"
-                               HeightRequest="48">
+
+    <VerticalStackLayout Spacing="10" Margin="5" >
+        <Grid ColumnDefinitions="*,*"
+              ColumnSpacing="5"
+              RowDefinitions="*, Auto"
+              RowSpacing="0">
+
+            <CollectionView ItemsSource="{Binding ErrorReports}" BackgroundColor="{StaticResource LightGray}" Grid.ColumnSpan="2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type models:ErrorReport }">
+                        
+                        <Image Source="./Resources/Images/elevator.jpg" 
+                               Margin="20, 0, 0, 0"
+                               WidthRequest="120"
+                               HeightRequest="120">
+                               
                             <Image.Clip>
-                                <EllipseGeometry RadiusX="13"
-                                                 RadiusY="13"
-                                                 Center="24, 24" />
+                                <EllipseGeometry RadiusX="30"
+                                                 RadiusY="30"
+                                                 Center="60, 60" />
                             </Image.Clip>
-                            
+
                         </Image>
 
-                        <Ellipse Margin="0"
-                                 Fill="Transparent"
-                                 Stroke="LightGray"
-                                 StrokeThickness="1"
-                                 HeightRequest="50"
-                                 WidthRequest="50"
-                                 VerticalOptions="Center"
-                                 HorizontalOptions="Center">
-                        </Ellipse>
-
-                        <StackLayout Grid.Column="1" Orientation="Vertical" Padding="20,5" Margin="2">
+                        <StackLayout Grid.Column="1" Orientation="Vertical" Padding="20,5" Margin="2" >
                             <Label Grid.Column="1"
                                Text="Error Report Id:"
                                FontAttributes="Bold"
@@ -66,8 +54,9 @@
                                FontAttributes="Italic"
                                VerticalOptions="End"
                                />
-                            
+
                             <Button Text="Description"
+                                    Margin="5"
                                     Padding="5"
                                     BackgroundColor="{StaticResource SpaceCadet}"
                                     FontSize="Default"
@@ -77,13 +66,12 @@
                                     HeightRequest="30"
                                     WidthRequest="100"
                                     />
-
                         </StackLayout>
-
-                        
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+              
+        
     </VerticalStackLayout>
 </ContentPage>
