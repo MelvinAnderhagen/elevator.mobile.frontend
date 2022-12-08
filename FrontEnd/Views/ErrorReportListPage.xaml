@@ -19,43 +19,44 @@
             <CollectionView ItemsSource="{Binding ErrorReports}" BackgroundColor="{StaticResource LightGray}" Grid.ColumnSpan="2">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type models:ErrorReport }">
-                        
-                        <Image Source="./Resources/Images/elevator.jpg" 
+                        <Grid>
+
+
+                            <Image Source="./Resources/Images/elevator.jpg" 
                                Margin="20, 0, 0, 0"
                                WidthRequest="120"
                                HeightRequest="120">
-                               
-                            <Image.Clip>
-                                <EllipseGeometry RadiusX="30"
+
+                                <Image.Clip>
+                                    <EllipseGeometry RadiusX="30"
                                                  RadiusY="30"
                                                  Center="60, 60" />
-                            </Image.Clip>
+                                </Image.Clip>
+                            </Image>
 
-                        </Image>
-
-                        <StackLayout Grid.Column="1" Orientation="Vertical" Padding="20,5" Margin="2" >
-                            <Label Grid.Column="1"
+                            <StackLayout Grid.Column="1" Orientation="Vertical" Padding="20,5" Margin="2" >
+                                <Label Grid.Column="1"
                                Text="Error Report Id:"
                                FontAttributes="Bold"
                                />
-                            <Label Grid.Row="1"
+                                <Label Grid.Row="1"
                                Grid.Column="1"
                                Text="{Binding Id}"
                                Margin="1"
                                />
 
-                            <Label Grid.Column="1"
+                                <Label Grid.Column="1"
                                Text="Deadline:"
                                FontAttributes="Bold"
                                />
-                            <Label Grid.Row="1"
+                                <Label Grid.Row="1"
                                Grid.Column="1"
                                Text="{Binding Deadline}" 
                                FontAttributes="Italic"
                                VerticalOptions="End"
                                />
 
-                            <Button Text="Description"
+                                <Button Text="Description"
                                     Margin="5"
                                     Padding="5"
                                     BackgroundColor="{StaticResource SpaceCadet}"
@@ -66,12 +67,13 @@
                                     HeightRequest="30"
                                     WidthRequest="100"
                                     />
-                        </StackLayout>
+                            </StackLayout>
+                        </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
-              
-        
+
+
     </VerticalStackLayout>
 </ContentPage>
