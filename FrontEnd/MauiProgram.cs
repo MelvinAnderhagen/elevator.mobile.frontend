@@ -32,8 +32,10 @@ public static class MauiProgram
 		});/*.ConfigurePrimaryHttpMessageHandler(() => new LocalhostAndroidHttpsMessageHandler());*/
 
         builder.Services.AddSingleton<LoginPageViewModel>();
-        builder.Services.AddSingleton<ErrorReportListViewModel>();
+        builder.Services.AddTransient<ErrorReportListViewModel>();
         builder.Services.AddSingleton<BaseViewModel>();
+		builder.Services.AddTransient<ReportDescriptionPage>();
+		builder.Services.AddTransient<ErrorReportListPage>();
 
         return builder.Build();
 	}
